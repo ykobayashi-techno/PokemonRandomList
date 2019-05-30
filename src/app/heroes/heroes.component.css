@@ -1,0 +1,22 @@
+
+ul.heroes {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.heroes li {
+  width: 10em;
+  margin: 0.4em;
+  padding: 0.3em 0em;
+  border: 1px solid #666;
+  border-radius: 0.5em;
+  background-color: #EEE;
+  overflow: hidden;
+}
+
+ul.heroes li span.badge {
+  padding: 0.3em 0.4em;
+  border-right: 1px solid #666;
+  background-color: #DDD;
+}
