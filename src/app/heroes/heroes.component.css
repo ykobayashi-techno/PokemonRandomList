@@ -1,22 +1,49 @@
 
 ul.heroes {
   list-style-type: none;
-  margin: 0;
+  margin: 2em 0 2em 0;
   padding: 0;
+  width: 15em;
 }
 
 ul.heroes li {
-  width: 10em;
-  margin: 0.4em;
-  padding: 0.3em 0em;
-  border: 1px solid #666;
-  border-radius: 0.5em;
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  height: 3em;
+  color: #888;
   background-color: #EEE;
-  overflow: hidden;
+  border-radius: 4px;
+  margin: 0 0 .5em 0;
+}
+
+ul.heroes li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+
+ul.heroes li.selected {
+  background-color: #CFD8DC;
+  color: white;
+}
+
+ul.heroes li.selected:hover {
+  background-color: #BBD8DC;
+  color: white;
 }
 
 ul.heroes li span.badge {
-  padding: 0.3em 0.4em;
-  border-right: 1px solid #666;
-  background-color: #DDD;
+  display: inline-block;
+  width: 2em;
+  height: 3em;
+  color: white;
+  line-height: 3em;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  margin-right: 1em;
+  text-align: center;
+  background-color: #607D8B;
+  border-radius: 4px 0 0 4px;
 }
