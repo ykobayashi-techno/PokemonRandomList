@@ -5,9 +5,12 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --prod --base-href \"https://ykobayashi-techno.github.io/AngularTutorialApp/\"",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "ghpage": "angular-cli-ghpages --dir=\"dist/my-app\"",
+    "buildup": "npm run build:prod & npm run ghpage"
   },
   "private": true,
   "dependencies": {
