@@ -1,3 +1,8 @@
-<p>
-  pokemon-card works!
-</p>
+<div class="pokemonCard" *ngIf="pokemon">
+  <div class="pokemonImage">
+    <img src="{{pokemon.sprites.front_default}}" />
+  </div>
+  <div class="pokemonDetail">
+    <p class="pokemonName">{{getPokemonJapaneseName(pokemon.name)}}</p>
+  </div>
+</div>
