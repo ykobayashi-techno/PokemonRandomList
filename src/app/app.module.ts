@@ -13,6 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { InMemoryDataService } from './in-memory-data.service';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
+import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
     MessagesComponent,
     DashboardComponent,
     HeroSearchComponent,
-    PokemonListComponent
+    PokemonListComponent,
+    PokemonCardComponent
   ],
   imports: [
     BrowserModule,
