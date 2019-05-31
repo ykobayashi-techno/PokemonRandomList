@@ -39,7 +39,6 @@ ul.heroes a {
   left: 0;
   top: 0;
   height: 3em;
-  width: 15em;
   color: #888;
   text-decoration: none;
 }
@@ -57,4 +56,26 @@ ul.heroes li span.badge {
   text-align: center;
   background-color: #607D8B;
   border-radius: 4px 0 0 4px;
+}
+
+button {
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+  font-family: Arial;
+}
+ 
+button:hover {
+  background-color: #cfd8dc;
+}
+ 
+button.delete {
+  position: relative;
+  left: 194px;
+  top: -36px;
+  background-color: gray !important;
+  color: white;
 }
