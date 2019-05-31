@@ -20,7 +20,7 @@ ul.heroes li {
 ul.heroes li:hover {
   color: #607D8B;
   background-color: #DDD;
-  left: .1em;
+  
 }
 
 ul.heroes li.selected {
@@ -31,6 +31,17 @@ ul.heroes li.selected {
 ul.heroes li.selected:hover {
   background-color: #BBD8DC;
   color: white;
+}
+
+ul.heroes a {
+  display: block;
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 3em;
+  width: 15em;
+  color: #888;
+  text-decoration: none;
 }
 
 ul.heroes li span.badge {
