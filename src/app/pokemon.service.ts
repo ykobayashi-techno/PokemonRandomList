@@ -5,6 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import pokemonData from './pokemonData.json';
 import { Pokemon } from './pokemon';
+import PokemonSpecies from './pokemon-species';
 
 @Injectable({
   providedIn: 'root'
@@ -18,8 +19,16 @@ export class PokemonService {
   getPokemon(id: number): Observable<Pokemon> {
     const url = `${this.pokemonApi}/pokemon/${id}/`;
     return this.http.get<Pokemon>(url).pipe(
-      tap(_ => console.log(`fetched hero id=${id}`)),
+      tap(_ => console.log(`fetched pokemon id=${id}`)),
       catchError(this.handleError<Pokemon>(`getPokemon id=${id}`))
+    );
+  }
+
+  getPokemonSpecies(id: number): Observable<PokemonSpecies> {
+    const url = `${this.pokemonApi}/pokemon-spacies/${id}/`;
+    return this.http.get<PokemonSpecies>(url).pipe(
+      tap(_ => console.log(`fetched pokemon-species id=${id}`)),
+      catchError(this.handleError<PokemonSpecies>(`getPokemonSpecies id=${id}`))
     );
   }
 

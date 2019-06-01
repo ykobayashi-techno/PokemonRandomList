@@ -10,4 +10,8 @@ export interface Pokemon {
     front_default: string,
     front_shiny: string
   };
+  species: {
+    name: string,
+    url: string
+  };
 }
