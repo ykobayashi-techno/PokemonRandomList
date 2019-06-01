@@ -4,7 +4,8 @@
 
   <ul class="pokemonList" *ngIf="pokemonIdList">
     <li class="pokemonCard" *ngFor="let pokemonId of pokemonIdList">
-      <app-pokemon-card [pokemonId]="pokemonId" (clickPokemonEvent)="onClickPokemon($event)">
+      <app-pokemon-card [pokemonId]="pokemonId" [activePokemon]="selectedPokemon"
+        (clickPokemonEvent)="onClickPokemon($event)">
       </app-pokemon-card>
     </li>
   </ul>
