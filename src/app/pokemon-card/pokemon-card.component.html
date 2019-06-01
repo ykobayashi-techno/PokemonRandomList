@@ -1,4 +1,4 @@
-<div class="pokemonCard" *ngIf="pokemon">
+<div class="pokemonCard" *ngIf="pokemon" (click)="dispatchClickPokemon()">
   <div class="pokemonImage">
     <img src="{{pokemon.sprites.front_default}}" />
   </div>

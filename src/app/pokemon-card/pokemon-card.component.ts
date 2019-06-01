@@ -1,6 +1,6 @@
 import { PokemonService } from './../pokemon.service';
 import { Pokemon } from './../pokemon';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-pokemon-card',
@@ -10,6 +10,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PokemonCardComponent implements OnInit {
 
   @Input() pokemonId: number;
+
+  // Output()デコレータを付けてEventを定義
+  @Output() clickPokemonEvent: EventEmitter<Pokemon> = new EventEmitter<Pokemon>();
 
   pokemon: Pokemon;
 
@@ -28,5 +31,10 @@ export class PokemonCardComponent implements OnInit {
 
   getPokemonJapaneseName(name) {
     return this.pokemonService.englishToJapanese(name);
+  }
+
+  // 子コンポーネントからイベントの発火
+  dispatchClickPokemon() {
+    this.clickPokemonEvent.emit(this.pokemon);
   }
 }

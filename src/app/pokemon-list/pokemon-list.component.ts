@@ -2,6 +2,7 @@ import { Pokemon } from './../pokemon';
 import { Component, OnInit } from '@angular/core';
 
 const POKEMON_LAST_ID = 655;
+
 @Component({
   selector: 'app-pokemon-list',
   templateUrl: './pokemon-list.component.html',
@@ -10,7 +11,9 @@ const POKEMON_LAST_ID = 655;
 export class PokemonListComponent implements OnInit {
 
   pokemonIdList: number[];
-  pokemonLastId = 964;
+  pokemonLastId = 807;
+
+  selectedPokemon: Pokemon;
 
   constructor() { }
 
@@ -30,5 +33,9 @@ export class PokemonListComponent implements OnInit {
 
   getRandomId() {
     return Math.floor(Math.random() * (POKEMON_LAST_ID - 1) + 1);
+  }
+
+  onClickPokemon(pokemon: Pokemon) {
+    this.selectedPokemon = pokemon;
   }
 }
