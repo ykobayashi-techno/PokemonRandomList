@@ -21,6 +21,7 @@ export class PokemonListComponent implements OnInit {
   }
 
   getRandomPokemonIds() {
+    this.selectedPokemon = null;
     const list = [];
     while (list.length < 10) {
       const id = this.getRandomId();

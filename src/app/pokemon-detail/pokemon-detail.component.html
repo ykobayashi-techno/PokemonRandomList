@@ -1,3 +1,15 @@
-<p>
-  pokemon-detail works!
-</p>
+<div>
+  <h3>{{pokemonName || ''}}</h3>
+
+  <p>解説文</p>
+
+  <dl *ngFor="let flavor of flavors">
+    <dt>
+      <span class="versionHeader">Version. </span>
+      <span class="versionLabel">{{flavor.version}}</span>
+    </dt>
+    <dd>
+      <p class="flavorText">{{flavor.text}}</p>
+    </dd>
+  </dl>
+</div>

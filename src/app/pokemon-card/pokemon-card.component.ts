@@ -35,7 +35,6 @@ export class PokemonCardComponent implements OnInit, OnChanges {
 
       if (this.pokemon && propName === 'activePokemon') {
         this.isSelected = this.pokemon === this.activePokemon;
-        if (this.isSelected) { console.log(propName, this.pokemon.name); }
       }
     }
   }
