@@ -38,7 +38,11 @@ export class PokemonDetailComponent implements OnInit, OnChanges {
   getPokemonSpecies() {
     this.pokemonName = '';
     this.flavors = [];
+
     this.pokemonService.getPokemonSpecies(this.pokemonId).subscribe(species => {
+      this.pokemonName = '';
+      this.flavors = [];
+
       this.pokemonName = species.names.find(pname => pname.language.name === 'ja').name;
       species.flavor_text_entries
         .filter(flav => flav.language.name === 'ja')

@@ -1,15 +1,30 @@
 <div>
-  <h3>{{pokemonName || ''}}</h3>
 
-  <p>解説文</p>
+  <div *ngIf="flavors.length; else loading"></div>
 
-  <dl *ngFor="let flavor of flavors">
-    <dt>
-      <span class="versionHeader">Version. </span>
-      <span class="versionLabel">{{flavor.version}}</span>
-    </dt>
-    <dd>
-      <p class="flavorText">{{flavor.text}}</p>
-    </dd>
-  </dl>
+  <div *ngIf="flavors.length" class="pokemonDetailWrapper">
+    <h3>{{pokemonName || ''}}</h3>
+
+    <p>解説文</p>
+
+    <dl *ngFor="let flavor of flavors">
+      <dt>
+        <span class="versionHeader">Version. </span>
+        <span class="versionLabel">{{flavor.version}}</span>
+      </dt>
+      <dd>
+        <p class="flavorText">{{flavor.text}}</p>
+      </dd>
+    </dl>
+  </div>
 </div>
+
+<ng-template #loading>
+  <div class="load-wrapp">
+    <div class="load-3">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </div>
+</ng-template>
