@@ -1,6 +1,6 @@
 <div>
 
-  <button class="ランダム" (click)="getRandomPokemonIds()">Update</button>
+  <button class="randomButton" (click)="getRandomPokemonIds()">Random</button>
 
   <ul class="pokemonList" *ngIf="pokemonIdList">
     <li class="pokemonCard" *ngFor="let pokemonId of pokemonIdList">

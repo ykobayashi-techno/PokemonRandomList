@@ -6,3 +6,23 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.randomButton {
+  margin-top: 1em;
+  border: none;
+  color: #111;
+  background-color: #E0E0E0;
+  padding: 0.5em 1em;
+  font-size: 1.25em;
+  font-weight: bold;
+  border-radius: 4px;
+
+}
+
+.randomButton:hover {
+  background-color: #EEE;
+}
+
+.randomButton:active {
+  background-color: #9E9E9E;
+}
