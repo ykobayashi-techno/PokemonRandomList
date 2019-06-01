@@ -10,5 +10,5 @@
     </li>
   </ul>
 
-  <app-pokemon-detail [pokemonId]="selectedPokemon.id"></app-pokemon-detail>
+  <app-pokemon-detail *ngIf="selectedPokemon" [pokemonId]="selectedPokemon.id"></app-pokemon-detail>
 </div>
