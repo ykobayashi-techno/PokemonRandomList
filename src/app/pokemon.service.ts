@@ -25,7 +25,7 @@ export class PokemonService {
   }
 
   getPokemonSpecies(id: number): Observable<PokemonSpecies> {
-    const url = `${this.pokemonApi}/pokemon-spacies/${id}/`;
+    const url = `${this.pokemonApi}/pokemon-species/${id}/`;
     return this.http.get<PokemonSpecies>(url).pipe(
       tap(_ => console.log(`fetched pokemon-species id=${id}`)),
       catchError(this.handleError<PokemonSpecies>(`getPokemonSpecies id=${id}`))
